@@ -33,6 +33,11 @@ task "db:version" do
   puts "Current version: #{ActiveRecord::Migrator.current_version}"
 end
 
+# desc 'starts over'
+# task "db:redo" do
+#   rake db:drop && rake db:create && rake db:migrate
+# end
+
 desc "Run the specs"
 RSpec::Core::RakeTask.new(:specs)
 
