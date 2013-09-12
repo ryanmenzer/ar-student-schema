@@ -109,7 +109,7 @@ describe Student, "advanced validations" do
   it "should accept valid info" do
     @student.should be_valid
   end
-
+# \A(d{10,}|\(\d{3}\)\s\d{3}-\d{4}\sx\d{4})
   it "shouldn't accept invalid phone numbers" do
     @student.assign_attributes(:phone => '347-8901')
     @student.should_not be_valid
